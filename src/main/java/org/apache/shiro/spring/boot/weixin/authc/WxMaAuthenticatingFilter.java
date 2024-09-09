@@ -15,13 +15,7 @@
  */
 package org.apache.shiro.spring.boot.weixin.authc;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.biz.authc.AuthcResponse;
@@ -30,12 +24,13 @@ import org.apache.shiro.biz.web.filter.authc.AbstractTrustableAuthenticatingFilt
 import org.apache.shiro.biz.web.servlet.http.HttpStatus;
 import org.apache.shiro.spring.boot.weixin.exception.WxJsCodeInvalidException;
 import org.apache.shiro.spring.boot.weixin.token.WxMaAuthenticationToken;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
-
-import com.alibaba.fastjson.JSONObject;
 import org.springframework.util.StringUtils;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 小程序微信认证 (authentication)过滤器

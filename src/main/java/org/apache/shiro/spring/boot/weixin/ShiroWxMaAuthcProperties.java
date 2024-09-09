@@ -15,12 +15,11 @@
  */
 package org.apache.shiro.spring.boot.weixin;
 
-import org.apache.shiro.spring.boot.weixin.authc.WxMaAuthenticatingFilter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.apache.shiro.spring.boot.weixin.authc.WxMaAuthenticatingFilter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(ShiroWxMaAuthcProperties.PREFIX)
 @Getter

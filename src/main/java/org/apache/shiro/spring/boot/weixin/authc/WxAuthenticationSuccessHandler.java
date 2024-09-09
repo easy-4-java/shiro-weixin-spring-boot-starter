@@ -15,13 +15,7 @@
  */
 package org.apache.shiro.spring.boot.weixin.authc;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Map;
-
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-
+import com.alibaba.fastjson.JSONObject;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.biz.authc.AuthenticationSuccessHandler;
 import org.apache.shiro.biz.authz.principal.ShiroPrincipal;
@@ -35,7 +29,11 @@ import org.apache.shiro.spring.boot.weixin.token.WxMpAuthenticationToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.http.MediaType;
 
-import com.alibaba.fastjson.JSONObject;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
 
 public class WxAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
@@ -68,7 +66,7 @@ public class WxAuthenticationSuccessHandler implements AuthenticationSuccessHand
 			// 账号首次登陆标记
 			if(ShiroPrincipal.class.isAssignableFrom(subject.getPrincipal().getClass())) {
 				// JSON Web Token (JWT)
-				tokenString = getJwtPayloadRepository().issueJwt(token, subject, request, response);
+				tokenString = getJwtPayloadRepository().issueJwt(token, subject);
 			} 
 			
 			Map<String, Object> tokenMap = SubjectJwtUtils.tokenMap(subject, tokenString);

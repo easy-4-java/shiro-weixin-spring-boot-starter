@@ -16,11 +16,10 @@
 package org.apache.shiro.spring.boot.weixin.authc;
 
 import cn.binarywang.wx.miniapp.bean.WxMaPhoneNumberInfo;
+import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
 
 /**
  * 微信小程序 Login Request

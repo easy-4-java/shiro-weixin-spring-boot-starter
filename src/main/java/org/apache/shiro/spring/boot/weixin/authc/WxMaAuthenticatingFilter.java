@@ -27,8 +27,8 @@ import org.apache.shiro.spring.boot.weixin.token.WxMaAuthenticationToken;
 import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 

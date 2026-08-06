@@ -18,7 +18,7 @@ import java.util.Objects;
 
 /**
  * WeiXin AuthorizingRealm
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author 		： <a href="https://github.com/easy-4-java">hiwepy</a>
  */
 @Slf4j
 public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {

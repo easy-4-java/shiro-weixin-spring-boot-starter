@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018, hiwepy (https://github.com/hiwepy).
+ * Copyright (c) 2018, hiwepy (https://github.com/easy-4-java).
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -21,7 +21,7 @@ import org.apache.shiro.spring.boot.weixin.authc.WxMpLoginRequest;
 /**
  * 微信公众号 Login Token
  *
- * @author ： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author ： <a href="https://github.com/easy-4-java">hiwepy</a>
  */
 @SuppressWarnings("serial")
 public class WxMpAuthenticationToken extends DefaultAuthenticationToken {

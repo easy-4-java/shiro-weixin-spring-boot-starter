@@ -19,7 +19,7 @@ import java.util.Objects;
 /**
  * WeiXin AuthorizingRealm
  * https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Official_Accounts/official_account_website_authorization.html
- * @author 		： <a href="https://github.com/easy-4-java">hiwepy</a>
+ * @author [@Loong Wan](https://github.com/loong10k)
  */
 @Slf4j
 public class WxMpAuthorizingRealm extends AbstractAuthorizingRealm {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018, hiwepy (https://github.com/easy-4-java).
+ * Copyright (c) 2018, hiwepy (https://github.com/hiwepy).
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -27,14 +27,14 @@ import org.apache.shiro.spring.boot.weixin.token.WxMaAuthenticationToken;
 import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
  * 小程序微信认证 (authentication)过滤器
- * @author ： <a href="https://github.com/easy-4-java">hiwepy</a>
+ * @author [@Loong Wan](https://github.com/loong10k)
  */
 @Slf4j
 public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {

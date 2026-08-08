@@ -13,15 +13,26 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.apache.shiro.spring.boot.weixin;
+package org.apache.shiro.spring.boot.weixin.authc;
 
-import org.apache.shiro.biz.authz.principal.ShiroPrincipal;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * TODO
+ * Unit tests for {{ @link WxMaLoginRequest }}.
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
-@SuppressWarnings("serial")
-public class ShiroWeiXinPrincipal extends ShiroPrincipal {
-	
+@DisplayName("WxMaLoginRequest Tests")
+class WxMaLoginRequestTest {
+
+    @Test
+    @DisplayName("Instance can be created via constructor")
+    void testInstantiation() {
+        WxMaLoginRequest instance = new WxMaLoginRequest(null);
+        assertThat(instance).isNotNull();
+    }
 }

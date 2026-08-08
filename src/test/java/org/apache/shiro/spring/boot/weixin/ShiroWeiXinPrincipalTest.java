@@ -15,13 +15,24 @@
  */
 package org.apache.shiro.spring.boot.weixin;
 
-import org.apache.shiro.biz.authz.principal.ShiroPrincipal;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * TODO
+ * Unit tests for {{ @link ShiroWeiXinPrincipal }}.
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
-@SuppressWarnings("serial")
-public class ShiroWeiXinPrincipal extends ShiroPrincipal {
-	
+@DisplayName("ShiroWeiXinPrincipal Tests")
+class ShiroWeiXinPrincipalTest {
+
+    @Test
+    @DisplayName("Instance can be created via constructor")
+    void testInstantiation() {
+        ShiroWeiXinPrincipal instance = new ShiroWeiXinPrincipal();
+        assertThat(instance).isNotNull();
+    }
 }

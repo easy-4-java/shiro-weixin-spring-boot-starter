@@ -13,15 +13,26 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.apache.shiro.spring.boot.weixin;
+package org.apache.shiro.spring.boot;
 
-import org.apache.shiro.biz.authz.principal.ShiroPrincipal;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * TODO
+ * Unit tests for {{ @link ShiroWeiXinWebFilterConfiguration }}.
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
-@SuppressWarnings("serial")
-public class ShiroWeiXinPrincipal extends ShiroPrincipal {
-	
+@DisplayName("ShiroWeiXinWebFilterConfiguration Tests")
+class ShiroWeiXinWebFilterConfigurationTest {
+
+    @Test
+    @DisplayName("Instance can be created via constructor")
+    void testInstantiation() {
+        ShiroWeiXinWebFilterConfiguration instance = new ShiroWeiXinWebFilterConfiguration();
+        assertThat(instance).isNotNull();
+    }
 }

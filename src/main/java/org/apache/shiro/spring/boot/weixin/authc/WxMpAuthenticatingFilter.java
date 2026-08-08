@@ -26,14 +26,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
  * 公众号微信认证 (authentication)过滤器
- * @author ： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author [@Loong Wan](https://github.com/loong10k)
  */
 public class WxMpAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {
 

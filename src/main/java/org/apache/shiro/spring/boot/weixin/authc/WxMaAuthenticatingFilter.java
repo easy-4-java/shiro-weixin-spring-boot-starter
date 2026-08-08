@@ -27,14 +27,14 @@ import org.apache.shiro.spring.boot.weixin.token.WxMaAuthenticationToken;
 import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
  * 小程序微信认证 (authentication)过滤器
- * @author ： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author [@Loong Wan](https://github.com/loong10k)
  */
 @Slf4j
 public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {

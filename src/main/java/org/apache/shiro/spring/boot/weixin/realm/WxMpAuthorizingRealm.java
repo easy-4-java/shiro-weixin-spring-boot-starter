@@ -1,6 +1,5 @@
 package org.apache.shiro.spring.boot.weixin.realm;
 
-import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -21,8 +20,9 @@ import java.util.Objects;
  * https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Official_Accounts/official_account_website_authorization.html
  * @author [@Loong Wan](https://github.com/loong10k)
  */
-@Slf4j
 public class WxMpAuthorizingRealm extends AbstractAuthorizingRealm {
+
+	private static final org.slf4j.Logger wxLog = org.slf4j.LoggerFactory.getLogger(WxMpAuthorizingRealm.class);
 
 	private final WxMpService wxMpService;
 
@@ -38,7 +38,7 @@ public class WxMpAuthorizingRealm extends AbstractAuthorizingRealm {
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 
-		log.info("Handle authentication token {}.", token);
+		wxLog.info("Handle authentication token {}.", token);
 
     	AuthenticationException ex = null;
     	AuthenticationInfo info = null;

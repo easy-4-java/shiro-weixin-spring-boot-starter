@@ -4,7 +4,6 @@ import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import cn.binarywang.wx.miniapp.bean.WxMaPhoneNumberInfo;
 import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -20,8 +19,9 @@ import java.util.Objects;
  * WeiXin AuthorizingRealm
  * @author [@Loong Wan](https://github.com/loong10k)
  */
-@Slf4j
 public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {
+
+	private static final org.slf4j.Logger wxLog = org.slf4j.LoggerFactory.getLogger(WxMaAuthorizingRealm.class);
 
 	private final WxMaService wxMaService;
 
@@ -37,7 +37,7 @@ public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 
-		log.info("Handle authentication token {}.", token);
+		wxLog.info("Handle authentication token {}.", token);
 
     	AuthenticationException ex = null;
     	AuthenticationInfo info = null;
@@ -65,7 +65,7 @@ public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {
 						loginRequest.setPhoneNumberInfo(phoneNumberInfo);
 					}
 				} catch (Exception e) {
-					log.error(e.getMessage());
+					wxLog.error(e.getMessage());
 				}
 			}
 			if(Objects.isNull(loginRequest.getUserInfo()) && StringUtils.hasText(loginRequest.getSessionKey()) && StringUtils.hasText(loginRequest.getEncryptedData()) && StringUtils.hasText(loginRequest.getIv())) {

@@ -21,40 +21,34 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Unit tests for {{ @link ShiroWeiXinProperties }}.
- *
- * <p>Verifies default values, getters/setters and POJO contract.</p>
+ * Unit tests for {@link ShiroWeiXinProperties}.
  *
  * @author [@Loong Wan](https://github.com/loong10k)
  * @since 1.0.0
  */
 @DisplayName("ShiroWeiXinProperties Tests")
 class ShiroWeiXinPropertiesTest {
+
     @Test
     @DisplayName("Default constructor creates non-null instance")
     void testDefaultInstance() {
         ShiroWeiXinProperties props = new ShiroWeiXinProperties();
         assertThat(props).isNotNull();
+        assertThat(props.isEnabled()).isFalse();
     }
 
     @Test
-    @DisplayName("Field 'enabled' can be set and read")
+    @DisplayName("enabled can be set and read")
     void testEnabledField() {
         ShiroWeiXinProperties props = new ShiroWeiXinProperties();
-        // Use reflection to set private field (covers all fields including those without setters)
-        try {
-            java.lang.reflect.Field f = ShiroWeiXinProperties.class.getDeclaredField("enabled");
-            f.setAccessible(true);
-            f.set(props, true);
-            Object value = f.get(props);
-            assertThat(value).isNotNull();
-        } catch (Exception e) {
-            // Field may have a more complex type; skip silently
-        }
+        props.setEnabled(true);
+        assertThat(props.isEnabled()).isTrue();
+        props.setEnabled(false);
+        assertThat(props.isEnabled()).isFalse();
     }
 
     @Test
-    @DisplayName("Public constant 'PREFIX' has expected value")
+    @DisplayName("PREFIX constant has expected value")
     void testPREFIXConstant() {
         assertThat(ShiroWeiXinProperties.PREFIX).isEqualTo("shiro.weixin");
     }

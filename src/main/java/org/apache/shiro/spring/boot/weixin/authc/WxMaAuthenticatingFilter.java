@@ -16,19 +16,21 @@
 package org.apache.shiro.spring.boot.weixin.authc;
 
 import com.alibaba.fastjson.JSONObject;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.biz.authc.AuthcResponse;
-import org.apache.shiro.biz.utils.WebUtils;
+import org.apache.shiro.biz.utils.WebUtils2;
+import org.apache.shiro.web.util.WebUtils;
 import org.apache.shiro.biz.web.filter.authc.AbstractTrustableAuthenticatingFilter;
 import org.apache.shiro.biz.web.servlet.http.HttpStatus;
 import org.apache.shiro.spring.boot.weixin.exception.WxJsCodeInvalidException;
 import org.apache.shiro.spring.boot.weixin.token.WxMaAuthenticationToken;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.util.StringUtils;
 
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
@@ -36,8 +38,9 @@ import java.nio.charset.StandardCharsets;
  * 小程序微信认证 (authentication)过滤器
  * @author [@Loong Wan](https://github.com/loong10k)
  */
-@Slf4j
 public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {
+
+	private static final Logger log = LoggerFactory.getLogger(WxMaAuthenticatingFilter.class);
 
 	public static final String SPRING_SECURITY_FORM_JSCODE_KEY = "jscode";
 	public static final String SPRING_SECURITY_FORM_SESSIONKEY_KEY = "sessionKey";
@@ -99,7 +102,7 @@ public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFil
 	@Override
 	protected AuthenticationToken createToken(ServletRequest request, ServletResponse response) {
 		// Post && JSON
-		if(WebUtils.isObjectRequest(request)) {
+		if(WebUtils2.isObjectRequest(request)) {
 			try {
 				WxMaLoginRequest loginRequest = objectMapper.readValue(request.getReader(), WxMaLoginRequest.class);
 				if ( !StringUtils.hasText(loginRequest.getJscode())) {

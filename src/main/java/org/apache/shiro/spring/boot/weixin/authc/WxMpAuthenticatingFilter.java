@@ -18,7 +18,8 @@ package org.apache.shiro.spring.boot.weixin.authc;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.biz.authc.AuthcResponse;
-import org.apache.shiro.biz.utils.WebUtils;
+import org.apache.shiro.biz.utils.WebUtils2;
+import org.apache.shiro.web.util.WebUtils;
 import org.apache.shiro.biz.web.filter.authc.AbstractTrustableAuthenticatingFilter;
 import org.apache.shiro.biz.web.servlet.http.HttpStatus;
 import org.apache.shiro.spring.boot.weixin.token.WxMpAuthenticationToken;
@@ -26,8 +27,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
@@ -91,7 +92,7 @@ public class WxMpAuthenticatingFilter extends AbstractTrustableAuthenticatingFil
 			}
 
 			// Ajax 请求：响应json数据对象
-			if (WebUtils.isAjaxRequest(request)) {
+			if (WebUtils2.isAjaxRequest(request)) {
 
 				WebUtils.toHttp(response).setStatus(HttpStatus.SC_OK);
 				response.setContentType(MediaType.APPLICATION_JSON_VALUE);
@@ -111,7 +112,7 @@ public class WxMpAuthenticatingFilter extends AbstractTrustableAuthenticatingFil
 	@Override
 	protected AuthenticationToken createToken(ServletRequest request, ServletResponse response) {
 		// Post && JSON
-		if(WebUtils.isObjectRequest(request)) {
+		if(WebUtils2.isObjectRequest(request)) {
 			try {
 				WxMpLoginRequest loginRequest = objectMapper.readValue(request.getReader(), WxMpLoginRequest.class);
 				return new WxMpAuthenticationToken(loginRequest ,getHost(request));

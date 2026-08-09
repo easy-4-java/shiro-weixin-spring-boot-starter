@@ -14,6 +14,14 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Auto-configuration for Shiro WeChat web authentication.
+ * <p>Registers WeChat-specific authentication filters, success handlers and configuration
+ * properties when the {@code shiro.weixin.enabled} property is set to {@code true}.</p>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
+ */
 @Configuration
 @AutoConfigureBefore( name = {
 	"org.apache.shiro.spring.config.web.autoconfigure.ShiroWebAutoConfiguration",  // shiro-spring-boot-web-starter
@@ -24,7 +32,13 @@ import org.springframework.context.annotation.Configuration;
 public class ShiroWeiXinWebAutoConfiguration extends AbstractShiroWebConfiguration implements ApplicationContextAware {
 
 	private ApplicationContext applicationContext;
-	
+
+	/**
+	 * Creates the WeChat authentication success handler.
+	 * @param jwtPayloadRepository the JWT payload repository
+	 * @param jwtProperties the JWT configuration properties
+	 * @return the configured success handler
+	 */
 	@Bean
 	protected WxAuthenticationSuccessHandler wxAuthenticationSuccessHandler(
 			JwtPayloadRepository jwtPayloadRepository,

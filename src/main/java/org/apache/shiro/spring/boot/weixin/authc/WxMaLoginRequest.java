@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * 微信小程序 Login Request
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WxMaLoginRequest {

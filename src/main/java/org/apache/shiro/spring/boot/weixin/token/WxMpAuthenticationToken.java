@@ -21,7 +21,7 @@ import org.apache.shiro.spring.boot.weixin.authc.WxMpLoginRequest;
 /**
  * 微信公众号 Login Token
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 @SuppressWarnings("serial")
 public class WxMpAuthenticationToken extends DefaultAuthenticationToken {

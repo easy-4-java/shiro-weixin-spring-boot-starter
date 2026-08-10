@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
  * <p>Registers WeChat-specific authentication filters, success handlers and configuration
  * properties when the {@code shiro.weixin.enabled} property is set to {@code true}.</p>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration

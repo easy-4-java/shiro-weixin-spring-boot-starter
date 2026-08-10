@@ -34,7 +34,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 小程序微信认证 (authentication)过滤器
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 @Slf4j
 public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {

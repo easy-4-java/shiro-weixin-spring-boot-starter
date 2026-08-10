@@ -24,7 +24,7 @@ import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
 /**
  * 微信公众号 Login Request
  * https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WxMpLoginRequest {

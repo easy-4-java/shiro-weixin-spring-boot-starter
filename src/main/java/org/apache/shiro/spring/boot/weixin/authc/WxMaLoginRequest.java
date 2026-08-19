@@ -25,6 +25,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * 微信小程序 Login Request
  *
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WxMaLoginRequest {
@@ -98,90 +99,200 @@ public class WxMaLoginRequest {
 		this.userInfo = userInfo;
 	}
 
+	/**
+	 * Returns the jscode.
+	 *
+	 * @return the jscode
+	 */
 	public String getJscode() {
 		return jscode;
 	}
 
+	/**
+	 * Sets the jscode.
+	 *
+	 * @param jscode the jscode
+	 */
 	public void setJscode(String jscode) {
 		this.jscode = jscode;
 	}
 
+	/**
+	 * Returns the session key.
+	 *
+	 * @return the session key
+	 */
 	public String getSessionKey() {
 		return sessionKey;
 	}
 
+	/**
+	 * Sets the session key.
+	 *
+	 * @param sessionKey the session key
+	 */
 	public void setSessionKey(String sessionKey) {
 		this.sessionKey = sessionKey;
 	}
 
+	/**
+	 * Returns the unionid.
+	 *
+	 * @return the unionid
+	 */
 	public String getUnionid() {
 		return unionid;
 	}
 
+	/**
+	 * Sets the unionid.
+	 *
+	 * @param unionid the unionid
+	 */
 	public void setUnionid(String unionid) {
 		this.unionid = unionid;
 	}
 
+	/**
+	 * Returns the openid.
+	 *
+	 * @return the openid
+	 */
 	public String getOpenid() {
 		return openid;
 	}
 
+	/**
+	 * Sets the openid.
+	 *
+	 * @param openid the openid
+	 */
 	public void setOpenid(String openid) {
 		this.openid = openid;
 	}
 
+	/**
+	 * Returns the signature.
+	 *
+	 * @return the signature
+	 */
 	public String getSignature() {
 		return signature;
 	}
 
+	/**
+	 * Sets the signature.
+	 *
+	 * @param signature the signature
+	 */
 	public void setSignature(String signature) {
 		this.signature = signature;
 	}
 
+	/**
+	 * Returns the raw data.
+	 *
+	 * @return the raw data
+	 */
 	public String getRawData() {
 		return rawData;
 	}
 
+	/**
+	 * Sets the raw data.
+	 *
+	 * @param rawData the raw data
+	 */
 	public void setRawData(String rawData) {
 		this.rawData = rawData;
 	}
 
+	/**
+	 * Returns the encrypted data.
+	 *
+	 * @return the encrypted data
+	 */
 	public String getEncryptedData() {
 		return encryptedData;
 	}
 
+	/**
+	 * Sets the encrypted data.
+	 *
+	 * @param encryptedData the encrypted data
+	 */
 	public void setEncryptedData(String encryptedData) {
 		this.encryptedData = encryptedData;
 	}
 
+	/**
+	 * Returns the iv.
+	 *
+	 * @return the iv
+	 */
 	public String getIv() {
 		return iv;
 	}
 
+	/**
+	 * Sets the iv.
+	 *
+	 * @param iv the iv
+	 */
 	public void setIv(String iv) {
 		this.iv = iv;
 	}
 
+	/**
+	 * Returns the token.
+	 *
+	 * @return the token
+	 */
 	public String getToken() {
 		return token;
 	}
 
+	/**
+	 * Sets the token.
+	 *
+	 * @param token the token
+	 */
 	public void setToken(String token) {
 		this.token = token;
 	}
 
+	/**
+	 * Returns the phone number info.
+	 *
+	 * @return the phone number info
+	 */
 	public WxMaPhoneNumberInfo getPhoneNumberInfo() {
 		return phoneNumberInfo;
 	}
 
+	/**
+	 * Sets the phone number info.
+	 *
+	 * @param phoneNumberInfo the phone number info
+	 */
 	public void setPhoneNumberInfo(WxMaPhoneNumberInfo phoneNumberInfo) {
 		this.phoneNumberInfo = phoneNumberInfo;
 	}
 
+	/**
+	 * Returns the user info.
+	 *
+	 * @return the user info
+	 */
 	public WxMaUserInfo getUserInfo() {
 		return userInfo;
 	}
 
+	/**
+	 * Sets the user info.
+	 *
+	 * @param userInfo the user info
+	 */
 	public void setUserInfo(WxMaUserInfo userInfo) {
 		this.userInfo = userInfo;
 	}

@@ -22,6 +22,12 @@ import org.apache.shiro.spring.boot.weixin.authc.WxMpAuthenticatingFilter;
 import org.apache.shiro.web.filter.authc.LogoutFilter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * <p>Configuration properties.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 @ConfigurationProperties(ShiroWxMpAuthcProperties.PREFIX)
 @Getter
 @Setter

@@ -22,6 +22,7 @@ import org.apache.shiro.spring.boot.weixin.authc.WxMaLoginRequest;
  * 微信小程序 Login Token
  *
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 @SuppressWarnings("serial")
 public class WxMaAuthenticationToken extends DefaultAuthenticationToken {
@@ -34,6 +35,11 @@ public class WxMaAuthenticationToken extends DefaultAuthenticationToken {
 	}
 
 	@Override
+	/**
+	 * Returns the principal.
+	 *
+	 * @return the principal
+	 */
 	public Object getPrincipal() {
 		return principal;
 	}

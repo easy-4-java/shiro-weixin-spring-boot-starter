@@ -25,6 +25,7 @@ import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;
  * 微信公众号 Login Request
  * https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WxMpLoginRequest {
@@ -71,58 +72,128 @@ public class WxMpLoginRequest {
 		this.token = token;
 	}
 
+	/**
+	 * Returns the code.
+	 *
+	 * @return the code
+	 */
 	public String getCode() {
 		return code;
 	}
 
+	/**
+	 * Sets the code.
+	 *
+	 * @param code the code
+	 */
 	public void setCode(String code) {
 		this.code = code;
 	}
 
+	/**
+	 * Returns the state.
+	 *
+	 * @return the state
+	 */
 	public String getState() {
 		return state;
 	}
 
+	/**
+	 * Sets the state.
+	 *
+	 * @param state the state
+	 */
 	public void setState(String state) {
 		this.state = state;
 	}
 
+	/**
+	 * Returns the unionid.
+	 *
+	 * @return the unionid
+	 */
 	public String getUnionid() {
 		return unionid;
 	}
 
+	/**
+	 * Sets the unionid.
+	 *
+	 * @param unionid the unionid
+	 */
 	public void setUnionid(String unionid) {
 		this.unionid = unionid;
 	}
 
+	/**
+	 * Returns the openid.
+	 *
+	 * @return the openid
+	 */
 	public String getOpenid() {
 		return openid;
 	}
 
+	/**
+	 * Sets the openid.
+	 *
+	 * @param openid the openid
+	 */
 	public void setOpenid(String openid) {
 		this.openid = openid;
 	}
 
+	/**
+	 * Returns the lang.
+	 *
+	 * @return the lang
+	 */
 	public String getLang() {
 		return lang;
 	}
 
+	/**
+	 * Sets the lang.
+	 *
+	 * @param lang the lang
+	 */
 	public void setLang(String lang) {
 		this.lang = lang;
 	}
 
+	/**
+	 * Returns the access token.
+	 *
+	 * @return the access token
+	 */
 	public WxOAuth2AccessToken getAccessToken() {
 		return accessToken;
 	}
 
+	/**
+	 * Sets the access token.
+	 *
+	 * @param accessToken the access token
+	 */
 	public void setAccessToken(WxOAuth2AccessToken accessToken) {
 		this.accessToken = accessToken;
 	}
 
+	/**
+	 * Returns the user info.
+	 *
+	 * @return the user info
+	 */
 	public WxOAuth2UserInfo getUserInfo() {
 		return userInfo;
 	}
 
+	/**
+	 * Sets the user info.
+	 *
+	 * @param userInfo the user info
+	 */
 	public void setUserInfo(WxOAuth2UserInfo userInfo) {
 		this.userInfo = userInfo;
 	}

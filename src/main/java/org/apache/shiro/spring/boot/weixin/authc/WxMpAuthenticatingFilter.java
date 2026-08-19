@@ -35,6 +35,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * 公众号微信认证 (authentication)过滤器
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 public class WxMpAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {
 
@@ -150,18 +151,38 @@ public class WxMpAuthenticatingFilter extends AbstractTrustableAuthenticatingFil
 		return request.getParameter(tokenParameter);
 	}
 
+	/**
+	 * Returns the code parameter.
+	 *
+	 * @return the code parameter
+	 */
 	public String getCodeParameter() {
 		return codeParameter;
 	}
 
+	/**
+	 * Sets the code parameter.
+	 *
+	 * @param codeParameter the code parameter
+	 */
 	public void setCodeParameter(String codeParameter) {
 		this.codeParameter = codeParameter;
 	}
 
+	/**
+	 * Sets the token parameter.
+	 *
+	 * @param tokenParameter the token parameter
+	 */
 	public void setTokenParameter(String tokenParameter) {
 		this.tokenParameter = tokenParameter;
 	}
 
+	/**
+	 * Returns the token parameter.
+	 *
+	 * @return the token parameter
+	 */
 	public String getTokenParameter() {
 		return tokenParameter;
 	}

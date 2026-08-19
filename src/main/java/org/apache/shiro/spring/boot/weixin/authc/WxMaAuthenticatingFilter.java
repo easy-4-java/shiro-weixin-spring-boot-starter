@@ -37,6 +37,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * 小程序微信认证 (authentication)过滤器
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFilter {
 
@@ -195,50 +196,110 @@ public class WxMaAuthenticatingFilter extends AbstractTrustableAuthenticatingFil
 		return request.getParameter(tokenParameter);
 	}
 
+	/**
+	 * Returns the jscode parameter.
+	 *
+	 * @return the jscode parameter
+	 */
 	public String getJscodeParameter() {
 		return jscodeParameter;
 	}
 
+	/**
+	 * Sets the jscode parameter.
+	 *
+	 * @param jscodeParameter the jscode parameter
+	 */
 	public void setJscodeParameter(String jscodeParameter) {
 		this.jscodeParameter = jscodeParameter;
 	}
 
+	/**
+	 * Returns the signature parameter.
+	 *
+	 * @return the signature parameter
+	 */
 	public String getSignatureParameter() {
 		return signatureParameter;
 	}
 
+	/**
+	 * Sets the signature parameter.
+	 *
+	 * @param signatureParameter the signature parameter
+	 */
 	public void setSignatureParameter(String signatureParameter) {
 		this.signatureParameter = signatureParameter;
 	}
 
+	/**
+	 * Returns the raw data parameter.
+	 *
+	 * @return the raw data parameter
+	 */
 	public String getRawDataParameter() {
 		return rawDataParameter;
 	}
 
+	/**
+	 * Sets the raw data parameter.
+	 *
+	 * @param rawDataParameter the raw data parameter
+	 */
 	public void setRawDataParameter(String rawDataParameter) {
 		this.rawDataParameter = rawDataParameter;
 	}
 
+	/**
+	 * Returns the encrypted data parameter.
+	 *
+	 * @return the encrypted data parameter
+	 */
 	public String getEncryptedDataParameter() {
 		return encryptedDataParameter;
 	}
 
+	/**
+	 * Sets the encrypted data parameter.
+	 *
+	 * @param encryptedDataParameter the encrypted data parameter
+	 */
 	public void setEncryptedDataParameter(String encryptedDataParameter) {
 		this.encryptedDataParameter = encryptedDataParameter;
 	}
 
+	/**
+	 * Returns the iv parameter.
+	 *
+	 * @return the iv parameter
+	 */
 	public String getIvParameter() {
 		return ivParameter;
 	}
 
+	/**
+	 * Sets the iv parameter.
+	 *
+	 * @param ivParameter the iv parameter
+	 */
 	public void setIvParameter(String ivParameter) {
 		this.ivParameter = ivParameter;
 	}
 
+	/**
+	 * Sets the token parameter.
+	 *
+	 * @param tokenParameter the token parameter
+	 */
 	public void setTokenParameter(String tokenParameter) {
 		this.tokenParameter = tokenParameter;
 	}
 
+	/**
+	 * Returns the token parameter.
+	 *
+	 * @return the token parameter
+	 */
 	public String getTokenParameter() {
 		return tokenParameter;
 	}

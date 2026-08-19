@@ -19,6 +19,7 @@ import java.util.Objects;
  * WeiXin AuthorizingRealm
  * https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Official_Accounts/official_account_website_authorization.html
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 public class WxMpAuthorizingRealm extends AbstractAuthorizingRealm {
 
@@ -31,6 +32,11 @@ public class WxMpAuthorizingRealm extends AbstractAuthorizingRealm {
     }
 
 	@Override
+	/**
+	 * Returns the authentication token class.
+	 *
+	 * @return the authentication token class
+	 */
 	public Class<?> getAuthenticationTokenClass() {
 		return WxMpAuthenticationToken.class;
 	}
@@ -90,6 +96,11 @@ public class WxMpAuthorizingRealm extends AbstractAuthorizingRealm {
 		return info;
 	}
 
+	/**
+	 * Returns the wx mp service.
+	 *
+	 * @return the wx mp service
+	 */
 	public WxMpService getWxMpService() {
 		return wxMpService;
 	}

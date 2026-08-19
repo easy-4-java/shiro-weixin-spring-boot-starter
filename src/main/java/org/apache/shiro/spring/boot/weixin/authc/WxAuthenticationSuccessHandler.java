@@ -36,6 +36,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 
+/**
+ * <p>Handler for Wx Authentication Success.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class WxAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 	
 	private JwtPayloadRepository jwtPayloadRepository;
@@ -52,6 +58,12 @@ public class WxAuthenticationSuccessHandler implements AuthenticationSuccessHand
 	}
 	
 	@Override
+	/**
+	 * supports.
+	 *
+	 * @param token the token
+	 * @return the result
+	 */
 	public boolean supports(AuthenticationToken token) {
 		return SubjectUtils.isAssignableFrom(token.getClass(), WxMaAuthenticationToken.class, WxMpAuthenticationToken.class);
 	}
@@ -83,22 +95,47 @@ public class WxAuthenticationSuccessHandler implements AuthenticationSuccessHand
 	}
 
 	@Override
+	/**
+	 * Returns the order.
+	 *
+	 * @return the order
+	 */
 	public int getOrder() {
 		return Integer.MAX_VALUE - 4;
 	}
 	
+	/**
+	 * Returns the jwt payload repository.
+	 *
+	 * @return the jwt payload repository
+	 */
 	public JwtPayloadRepository getJwtPayloadRepository() {
 		return jwtPayloadRepository;
 	}
 
+	/**
+	 * Sets the jwt payload repository.
+	 *
+	 * @param jwtPayloadRepository the jwt payload repository
+	 */
 	public void setJwtPayloadRepository(JwtPayloadRepository jwtPayloadRepository) {
 		this.jwtPayloadRepository = jwtPayloadRepository;
 	}
 
+	/**
+	 * Returns the check expiry.
+	 *
+	 * @return the check expiry
+	 */
 	public boolean isCheckExpiry() {
 		return checkExpiry;
 	}
 
+	/**
+	 * Sets the check expiry.
+	 *
+	 * @param checkExpiry the check expiry
+	 */
 	public void setCheckExpiry(boolean checkExpiry) {
 		this.checkExpiry = checkExpiry;
 	}

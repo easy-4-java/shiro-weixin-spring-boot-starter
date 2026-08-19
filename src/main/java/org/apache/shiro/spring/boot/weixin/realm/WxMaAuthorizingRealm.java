@@ -18,6 +18,7 @@ import java.util.Objects;
 /**
  * WeiXin AuthorizingRealm
  * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
  */
 public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {
 
@@ -30,6 +31,11 @@ public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {
     }
 
 	@Override
+	/**
+	 * Returns the authentication token class.
+	 *
+	 * @return the authentication token class
+	 */
 	public Class<?> getAuthenticationTokenClass() {
 		return WxMaAuthenticationToken.class;
 	}
@@ -106,6 +112,11 @@ public class WxMaAuthorizingRealm extends AbstractAuthorizingRealm {
 		return info;
 	}
 
+	/**
+	 * Returns the wx ma service.
+	 *
+	 * @return the wx ma service
+	 */
 	public WxMaService getWxMaService() {
 		return wxMaService;
 	}
